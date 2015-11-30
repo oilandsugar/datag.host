@@ -58,6 +58,18 @@ a.link:hover {
     background-color:#444444;
 }
 
+#gallery {
+  height:100%;
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: #D5D5D5;
+  display:none;
+}
+
 .padding {
   padding:10px;
 }

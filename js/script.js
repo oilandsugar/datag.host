@@ -20,5 +20,14 @@ jQuery(function($) {
       $('#gallery').fadeOut(800).find('.content').html('');
     });
 
+    $('.img').click(function(){
+      var type = $(this).attr('class');
+      if(type == "img") {
+        var link = $(this).find("img").attr('src');
+      }
+      $('#gallery').find('.content').html('<img src="' + link + '">');
+      $('#gallery').delay(500).fadeIn(800);
+    });
+
   });
 });

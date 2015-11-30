@@ -24,20 +24,29 @@ body {
   word-break: break-all;
 }
 
+h1 {
+  font-family: 'Share Tech Mono', monospace;
+  color:#D5D5D5;
+  font-size:30px;
+}
+
 #logo {
   margin: 20px 0;
   width: 100%;
-  opacity: 0.2;
-  -o-transition:0.8s;
-  -moz-transition:0.8s;
-  -webkit-transition:0.8s;
-  transition:0.8s;
   background:#000;
   padding:10px;
   box-sizing:border-box;
 }
 
-#logo:hover {
+#logo img {
+  opacity: 0.2;
+  -o-transition:0.8s;
+  -moz-transition:0.8s;
+  -webkit-transition:0.8s;
+  transition:0.8s;
+}
+
+#logo img:hover {
   opacity:1;
 }
 

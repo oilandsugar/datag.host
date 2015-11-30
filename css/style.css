@@ -78,6 +78,17 @@ a.link:hover {
   width:auto;
 }
 
+#gallery .caption {
+  position:absolute;
+  bottom:0;
+  height:60px;
+  padding:10px;
+  width:100%;
+  box-sizing: border-box;
+  color:#fff;
+  background:rgba(0, 0, 0, 0.6);
+}
+
 #gallery .big-padding {
   height:100%;
 }

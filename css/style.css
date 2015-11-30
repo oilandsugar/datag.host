@@ -78,8 +78,13 @@ a.link:hover {
   width:auto;
 }
 
+#gallery .big-padding {
+  height:100%;
+}
+
 #gallery .content {
   text-align:center;
+  height:100%;
 }
 
 .padding {

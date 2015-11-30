@@ -69,6 +69,13 @@ a.link:hover {
   z-index: 100;
   background: #D5D5D5;
   display:none;
+  cursor:pointer;
+}
+
+#gallery img {
+  max-width:none;
+  height:100%;
+  width:auto;
 }
 
 #gallery .content {

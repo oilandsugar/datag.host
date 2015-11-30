@@ -1,6 +1,10 @@
 jQuery(function($) {
 
   function open(id){
+    console.log(id);
+  }
+
+  function open_old(id){
     var element = $('#' + id);
     var type = element.attr('class');
     if(type == "img") {

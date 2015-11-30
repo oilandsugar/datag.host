@@ -4,5 +4,20 @@ body {
 }
 
 #logo {
-  margin:100px auto;
+  margin:300px auto;
+  width: 200px;
+  opacity: 0.2;
+  -o-transition:0.8s;
+  -moz-transition:0.8s;
+  -webkit-transition:0.8s;
+  transition:0.8s;
+}
+
+#logo:hover {
+  opacity:1;
+}
+
+img {
+  max-width:100%;
+  height:auto;
 }

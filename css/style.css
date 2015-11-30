@@ -24,19 +24,25 @@ body {
   word-break: break-all;
 }
 
+.img {
+  width:100%;
+  margin:20px 0;
+}
+
 h1 {
   font-family: 'Share Tech Mono', monospace;
   color:#D5D5D5;
   font-size: 10px;
   margin: 0;
+  line-height: 15px;
 }
 
 hr {
   border:0;
   background:transparent;
   width:100%;
-  border-bottom:1px dashed #fff;
-  margin:10px 0;
+  border-bottom:1px dashed #000;
+  margin:20px 0;
 }
 
 #logo {

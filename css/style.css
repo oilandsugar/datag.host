@@ -6,6 +6,7 @@ body {
   border:0;
   background:#1C1F1F;
   height:100%;
+  font-family:sans-serif;
 }
 
 .wrap {
@@ -20,6 +21,27 @@ body {
   float:left;
   height:100%;
   overflow:auto;
+}
+
+a {
+  cursor:pointer;
+}
+
+a.link {
+  padding:10px;
+  background:#000;
+  color:#D5D5D5;
+  font-family: 'Share Tech Mono', monospace;
+  font-size:20px;
+  letter-spacing:-1px;
+  -o-transition:0.8s;
+  -moz-transition:0.8s;
+  -webkit-transition:0.8s;
+  transition:0.8s;
+}
+
+a.link:hover {
+  color:#fff;
 }
 
 .col::-webkit-scrollbar {
@@ -57,7 +79,7 @@ body {
 .img .caption {
   position:absolute;
   left:0;
-  top:30px;
+  top:60px;
   padding:10px;
   width:100%;
   box-sizing: border-box;

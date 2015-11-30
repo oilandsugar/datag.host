@@ -3,9 +3,21 @@ body {
   background:#1C1F1F;
 }
 
+.wrap {
+  width:200px;
+  margin-top:350px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.data {
+  font-size:5px;
+  font-family: 'Share Tech Mono', monospace ;
+}
+
 #logo {
-  margin:300px auto;
-  width: 200px;
+  margin:0 0 20px 0;
+  width: 100%;
   opacity: 0.2;
   -o-transition:0.8s;
   -moz-transition:0.8s;

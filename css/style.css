@@ -1,17 +1,22 @@
 body {
   border:0;
   background:#1C1F1F;
+  heightL:100%;
 }
 
 .wrap {
   max-width:1000px;
   margin-left:auto;
   margin-right:auto;
+  height:100%;
 }
 
 .col {
-  width:25%;
+  width:calc(25% - 30px);
   float:left;
+  height:100%;
+  overflow:auto;
+  margin-right:30px;
 }
 
 .padding {

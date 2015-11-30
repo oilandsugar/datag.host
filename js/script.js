@@ -6,7 +6,7 @@ jQuery(function($) {
     if(type == "img") {
       var link = element.find("img").attr('src');
     }
-    $('#gallry').find('.content').html('<img src="' + link + '">');
+    $('#gallery').find('.content').html('<img src="' + link + '">');
     $('#gallery').delay(500).fadeIn(800);
   }
 

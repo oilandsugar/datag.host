@@ -6,7 +6,8 @@ body {
   border:0;
   background:#1C1F1F;
   height:100%;
-  font-family:sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight:700;
 }
 
 .wrap {

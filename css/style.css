@@ -16,11 +16,10 @@ body {
 }
 
 .col {
-  width:calc(25% - 30px);
+  width:c25%;
   float:left;
   height:100%;
   overflow:auto;
-  margin-right:30px;
 }
 
 .col::-webkit-scrollbar {
@@ -49,6 +48,20 @@ body {
 .img {
   width:100%;
   margin:20px 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #D5D5D5;
+  position:relative;
+}
+
+.img .caption {
+  position:relative;
+  top:30px;
+  padding:20px;
+  width:100%;
+  box-sizing: border-box;
+  color:#fff;
+  background:rgba(0, 0, 0, 0.4);
 }
 
 h1 {

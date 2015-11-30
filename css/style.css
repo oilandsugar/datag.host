@@ -24,8 +24,8 @@ body {
 }
 
 .col::-webkit-scrollbar {
-    width:5px;
-    margin-left:15px;
+    width:4px;
+    margin-right:15px;
 }
 
 .col::-webkit-scrollbar-track {
@@ -33,7 +33,7 @@ body {
 }
 
 .col::-webkit-scrollbar-thumb {
-    background-color:#D5D5D5;
+    background-color:#444444;
 }
 
 .padding {

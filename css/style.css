@@ -66,12 +66,23 @@ a.link:hover {
   left:0;
   right:0;
   bottom:0;
+  z-index: 100;
   background: #D5D5D5;
   display:none;
 }
 
+#gallery .content {
+  text-align:center;
+}
+
 .padding {
   padding:10px;
+  box-sizing:border-box;
+}
+
+.big-padding {
+  padding:60px;
+  box-sizing:border-box;
 }
 
 .data {

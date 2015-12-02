@@ -20,7 +20,8 @@ jQuery(function($) {
       $('#gallery').delay(500).fadeIn(800);
     });
 
-		$('.sound').click(function(){
+		$('.sound').click(function(e){
+			e.preventDefault();
 			var link = $(this).find("a").attr('href');
 			$('#gallery').find('.content').html('<iframe width="100%" height="450" scrolling="no" frameborder="no" src="' + link + '"></iframe>');
 			$('#gallery').delay(500).fadeIn(800);

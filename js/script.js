@@ -23,5 +23,9 @@ jQuery(function($) {
       $('#gallery').delay(500).fadeIn(800);
     });
 
+		$('.sound').click(function(){
+			console.log('sound clicked');
+		});
+
   });
 });

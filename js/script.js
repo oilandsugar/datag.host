@@ -24,6 +24,7 @@ jQuery(function($) {
 			e.preventDefault();
 			var link = $(this).find("a").attr('href');
 			$('#gallery').find('.content').html('<iframe width="100%" height="450" scrolling="no" frameborder="no" src="' + link + '"></iframe>');
+			$('#gallery').find('.caption').hide();
 			$('#gallery').delay(500).fadeIn(800);
 		});
 

@@ -373,7 +373,6 @@ img {
 .text {
   font-size: 12px;
   font-family: 'Share Tech Mono', monospace;
-  word-break: break-all;
   color: #606060;
 }
 

@@ -1,4 +1,12 @@
 jQuery(function($) {
+
+	var showText = function (target, message, index, interval) {
+	  if (index < message.length) {
+	    $(target).append(message[index++]);
+	    setTimeout(function () { showText(target, message, index, interval); }, interval);
+	  }
+	}
+
 	$(document).ready(function() {
 
     $('#gallery').click(function(){
@@ -45,16 +53,33 @@ jQuery(function($) {
 					var lines = $('#terminal').find('textarea').val().split('\n');
 					var input = lines[lines.length-1];
 					console.log(input);
-					if(input == "darker") {
+					if(input == "darker")
+					{
 						$('#content').css('background', '#000000');
-					} else if(input == "lighter") {
+					}
+					else if(input == "lighter")
+					{
 						$('#content').css('background', '#606060');
-					} else if(input == "neutral") {
+					}
+					else if(input == "neutral")
+					{
 						$('#content').css('background', '#1C1F1F');
-					} else if(input == "about") {
-						$('#output').html('DATAG.HOST is a visual and musical project by Tommy Poirier-Morissette, bringing code, generative visuals and electronic music into public space and back on the web.');
-					} else if(input == "help") {
-						$('#output').html('You are on your own here, no documentation is yet accessible, feel free to explore this uncharted territory.');
+					}
+					else if(input == "about")
+					{
+						showText("#output", "DATAG.HOST is a visual and musical project by Tommy Poirier-Morissette, bringing code, generative visuals and electronic music into public space and back on the web.", 0, 10);
+					}
+					else if(input == "help")
+					{
+						showText("#output", "You are on your own here, no documentation is yet accessible, feel free to explore this uncharted territory.", 0, 10);
+					}
+					else if(input == "void")
+					{
+						$('body').html('');
+					}
+					else
+					{
+						showText("#output", "That's not a registered expression, try 'help' to get some insight.", 0, 10);
 					}
 		    }
 		});

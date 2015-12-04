@@ -67,14 +67,17 @@ jQuery(function($) {
 					}
 					else if(input == "about")
 					{
+						$('#output').html('');
 						showText("#output", "DATAG.HOST is a visual and musical project by Tommy Poirier-Morissette, bringing code, generative visuals and electronic music into public space and back on the web.", 0, 10);
 					}
 					else if(input == "help")
 					{
+						$('#output').html('');
 						showText("#output", "You are on your own here, no documentation is yet accessible, feel free to explore this uncharted territory.", 0, 10);
 					}
 					else if(input == "more help")
 					{
+						$('#output').html('');
 						showText("#output", "Okay, I lied, here is commands to get you started: 'about' 'help' 'darker' 'lighter' 'neutral' 'void'", 0, 10);
 					}
 					else if(input == "void")
@@ -83,10 +86,12 @@ jQuery(function($) {
 					}
 					else if(input == "batman")
 					{
+						$('#output').html('');
 						showText("#output", "NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN", 0, 10);
 					}
 					else
 					{
+						$('#output').html('');
 						showText("#output", "That's not a registered expression, try 'help' to get some insight.", 0, 10);
 					}
 		    }

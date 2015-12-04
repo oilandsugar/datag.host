@@ -7,7 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico"/>
-	  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	  <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/script.js"></script>
   </head>
   <body>
@@ -23,9 +23,6 @@
 
     <header id="head">
       <div class="wrap">
-        <div id="logo">
-          <img src="img/logo_vert.svg">
-        </div>
         <div class="col">
           <div class="padding">
             <div class="text">
@@ -53,80 +50,98 @@
             </div>
           </div>
         </div>
-      </div>
-    </header>
-
-    <div class="wrap">
-      <div class="col">
-        <div class="padding">
-          <h1>
-            VISUALS<br>
-          </h1>
-          <div id="04" class="img">
-            <img src="img/merger.png">
-          </div>
-          <div id="03" class="img">
-            <img src="img/flyer.jpg">
-          </div>
-          <div id="02" class="img">
-            <img src="img/dataset.svg">
-          </div>
-          <div id="01" class="img">
-            <img src="img/wip.png">
-            <div class="caption">
-              building the visuals of datag.host
+        <div class="col-2 text">
+          <div class="padding">
+            <a id="open-terminal">open terminal</a>
+            <div id="terminal">
+              <div class="header"><span class="circle-btn"></span><span class="circle-btn"></span><span class="circle-btn"></span></div>
+              <div class="window">
+                <form>
+                  <textarea></textarea>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="padding">
-          <h1>
-            SOUNDS<br>
-          </h1>
-          <div id="05" class="sound">
-            <a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/235691822&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
-              <div class="info-wrap">
-                <div class="info">
-                  Release:<br>
-                  01 / 12 / 2015<br>
-                  23:16<br>
-                  <br>
-                  TotalTime: 02:34<br>
-                  Items: 1<br>
-                  Size: 40.8Mo
-                </div>
-                <h2>
-                  <hr>
-                  orb crs-3
-                  <hr>
-                </h2>
+    </header>
+
+    <section id="content">
+      <div id="logo">
+        <img src="img/logo_vert.svg">
+      </div>
+      <div class="wrap">
+        <div class="col">
+          <div class="padding">
+            <h1>
+              VISUALS<br>
+            </h1>
+            <div id="04" class="img">
+              <img src="img/merger.png">
+            </div>
+            <div id="03" class="img">
+              <img src="img/flyer.jpg">
+            </div>
+            <div id="02" class="img">
+              <img src="img/dataset.svg">
+            </div>
+            <div id="01" class="img">
+              <img src="img/wip.png">
+              <div class="caption">
+                building the visuals of datag.host
               </div>
-              <img src="img/orb-crs-3.jpg">
-            </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="padding">
+            <h1>
+              SOUNDS<br>
+            </h1>
+            <div id="05" class="sound">
+              <a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/235691822&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+                <div class="info-wrap">
+                  <div class="info">
+                    Release:<br>
+                    01 / 12 / 2015<br>
+                    23:16<br>
+                    <br>
+                    TotalTime: 02:34<br>
+                    Items: 1<br>
+                    Size: 40.8Mo
+                  </div>
+                  <h2>
+                    <hr>
+                    orb crs-3
+                    <hr>
+                  </h2>
+                </div>
+                <img src="img/orb-crs-3.jpg">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="padding">
+            <h1>
+              ECHOES<br>
+            </h1>
+            <div class="links">
+              <a class="link" href="https://www.instagram.com/datag.host/">
+                instagram
+              </a>
+              <hr>
+              <a class="link" href="https://soundcloud.com/datag-host">
+                soundcloud
+              </a>
+              <hr>
+              <a class="link" href="https://twitter.com/datag_host">
+                twitter
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="padding">
-          <h1>
-            ECHOES<br>
-          </h1>
-          <div class="links">
-            <a class="link" href="https://www.instagram.com/datag.host/">
-              instagram
-            </a>
-            <hr>
-            <a class="link" href="https://soundcloud.com/datag-host">
-              soundcloud
-            </a>
-            <hr>
-            <a class="link" href="https://twitter.com/datag_host">
-              twitter
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   </body>
 </html>

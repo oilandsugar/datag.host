@@ -28,5 +28,17 @@ jQuery(function($) {
 			$('#gallery').delay(500).fadeIn(800);
 		});
 
+		$('#open-terminal').click(function(e){
+			e.preventDefault();
+			$('#head').toggleClass('terminal');
+			$('#content').toggleClass('terminal');
+			if($('#head').hasClass('terminal')) {
+				$(this).html('close terminal');
+			} else {
+				$(this).html('open terminal');
+				$('#terminal').find('textarea').val("");
+			}
+		});
+
   });
 });

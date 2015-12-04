@@ -84,6 +84,11 @@ jQuery(function($) {
 					{
 						$('body').html('');
 					}
+					else if(input == "see more")
+					{
+						$('#head').toggleClass('more-terminal');
+						$('#content').toggleClass('more-terminal');
+					}
 					else if(input == "batman")
 					{
 						$('#output').html('');

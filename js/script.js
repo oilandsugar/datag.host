@@ -84,6 +84,42 @@ jQuery(function($) {
 					{
 						$('body').html('');
 					}
+					else if(input == "visuals")
+					{
+						$('#sounds').fadeOut('500').removeClass('full');
+						$('#visuals').fadeIn('500').toggleClass('full');
+						$('#echoes').fadeOut('500').removeClass('full');
+						$('#visuals').find('h1').html('only visuals');
+						$('#sounds').find('h1').html('sound');
+						$('#echoes').find('h1').html('echoes');
+					}
+					else if(input == "sounds")
+					{
+						$('#sounds').fadeIn('500').toggleClass('full');
+						$('#visuals').fadeOut('500').removeClass('full');
+						$('#echoes').fadeOut('500').removeClass('full');
+						$('#visuals').find('h1').html('visuals');
+						$('#sounds').find('h1').html('only sound');
+						$('#echoes').find('h1').html('echoes');
+					}
+					else if(input == "echoes")
+					{
+						$('#sounds').fadeOut('500').removeClass('full');
+						$('#visuals').fadeOut('500').removeClass('full');
+						$('#echoes').fadeIn('500').toggleClass('full');
+						$('#visuals').find('h1').html('visuals');
+						$('#sounds').find('h1').html('sound');
+						$('#echoes').find('h1').html('only echoes');
+					}
+					else if(input == "all content")
+					{
+						$('#sounds').fadeIn('500').removeClass('full');
+						$('#visuals').fadeIn('500').removeClass('full');
+						$('#echoes').fadeIn('500').removeClass('full');
+						$('#visuals').find('h1').html('visuals');
+						$('#sounds').find('h1').html('sound');
+						$('#echoes').find('h1').html('echoes');
+					}
 					else if(input == "see more")
 					{
 						$('#head').toggleClass('more-terminal');

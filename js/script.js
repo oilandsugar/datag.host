@@ -40,5 +40,20 @@ jQuery(function($) {
 			}
 		});
 
+		$('#terminal').find('textarea').keypress(function(e) {
+		    if(e.which == 13) {
+					var lines = $('#terminal').find('textarea').val().split('\n');
+					var input = lines[lines.length-1];
+					console.log(input);
+					if(input == "darker") {
+						$('#content').css('background', '#000000');
+					} else if(input == "lighter") {
+						$('#content').css('background', '#606060');
+					} else if(input == "neutral") {
+						$('#content').css('background', '#1C1F1F');
+					}
+		    }
+		});
+
   });
 });

@@ -73,9 +73,17 @@ jQuery(function($) {
 					{
 						showText("#output", "You are on your own here, no documentation is yet accessible, feel free to explore this uncharted territory.", 0, 10);
 					}
+					else if(input == "more help")
+					{
+						showText("#output", "Okay, I lied, here is commands to get you started: 'about' 'help' 'darker' 'lighter' 'neutral' 'void'", 0, 10);
+					}
 					else if(input == "void")
 					{
 						$('body').html('');
+					}
+					else if(input == "batman")
+					{
+						showText("#output", "NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN", 0, 10);
 					}
 					else
 					{

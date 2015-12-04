@@ -84,6 +84,11 @@ body {
   height:100%;
 }
 
+#output {
+  margin-top:40px;
+  color:#fff;
+}
+
 #content {
   margin-top:130px;
   background:#1C1F1F;

@@ -51,6 +51,10 @@ jQuery(function($) {
 						$('#content').css('background', '#606060');
 					} else if(input == "neutral") {
 						$('#content').css('background', '#1C1F1F');
+					} else if(input == "about") {
+						$('#output').html('DATAG.HOST is a visual and musical project by Tommy Poirier-Morissette, bringing code, generative visuals and electronic music into public space and back on the web.');
+					} else if(input == "help") {
+						$('#output').html('You are on your own here, no documentation is yet accessible, feel free to explore this uncharted territory.');
 					}
 		    }
 		});

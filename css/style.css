@@ -102,6 +102,7 @@ body {
   -moz-transition:0.8s;
   -webkit-transition:0.8s;
   transition:0.8s;
+  min-height:calc(100% - 300px);
 }
 
 #content.terminal {

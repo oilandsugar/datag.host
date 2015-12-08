@@ -141,5 +141,17 @@ jQuery(function($) {
 		    }
 		});
 
+		// generate instagram feed
+
+		var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'datag_host',
+        clientId: '7ebf8473c6a540c280cf72dced575ea1',
+				resolution:'standard_resolution',
+				limit: '3',
+				template: '<div class="instagram"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></div>'
+    });
+    feed.run();
+
   });
 });

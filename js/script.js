@@ -27,6 +27,69 @@ jQuery(function($) {
 
 	$(document).ready(function() {
 
+		$('#toggle-terminal').click(function(e) {
+			e.preventDefault();
+			$('#terminal').toggleClass('show');
+			$('#toggle-terminal').toggleClass('active');
+		});
+
+		$('#close-terminal').click(function(e) {
+			e.preventDefault();
+			$('#terminal').toggleClass('show');
+			$('#toggle-terminal').toggleClass('active');
+		});
+
+		// rotator
+
+		var $rotator = $("#back-visuals");
+		var $navrotator = $("#dots");
+		$rotator.find('img').each(function(){
+			$navrotator.append('<a class="dot"><i class="fa fa-circle-o"></i></a>');
+		});
+		$rotator.find("img:gt(0)").hide();
+		$navrotator.find("a.dot:eq(0)").addClass('selected');
+		$navrotator.find("a.dot:eq(0)").html('<i class="fa fa-circle"></i>');
+
+		$('a.dot').click(function(){
+			var dotClicked = $('a.dot').index(this);
+			console.log(dotClicked);
+			changeSlide(dotClicked);
+		});
+
+		setTimeout(Rotate, 5000);
+
+		function changeSlide(dotClicked){
+			var index = dotClicked;
+			var $otherImg = $rotator.find("img:visible");
+			var $otherdots = $navrotator.find("a.dot:not(:eq(" + index + "))");
+			var $actualImg = $rotator.find("img").eq(index);
+			var $actualDot = $navrotator.find("a.dot").eq(index);
+			if($actualImg !== $otherImg){
+				$otherImg.fadeOut(500);
+			}
+			$otherdots.removeClass('selected');
+			$otherdots.html('<i class="fa fa-circle-o"></i>');
+			$actualImg.fadeIn(500);
+			$actualDot.addClass('selected');
+			$actualDot.html('<i class="fa fa-circle"></i>');
+		}
+
+		function Rotate() {
+			var $current = $rotator.find("img:visible");
+			var $currentdot = $navrotator.find("a.selected");
+			var $next = $current.next();
+			var $nextdot = $currentdot.next();
+			if ($next.length === 0) $next = $rotator.find("img:eq(0)");
+			if ($nextdot.length === 0) $nextdot = $navrotator.find("a.dot:eq(0)");
+			$current.fadeOut(500);
+			$currentdot.removeClass('selected');
+			$currentdot.html('<i class="fa fa-circle-o"></i>');
+			$next.fadeIn(500);
+			$nextdot.addClass('selected');
+			$nextdot.html('<i class="fa fa-circle"></i>');
+			setTimeout(Rotate, 5000);
+		}
+
     $('#gallery').click(function(){
       $('#gallery').fadeOut(800, 'easeInOutCubic', function(){
 				$(this).find('.content').html('');
@@ -56,18 +119,6 @@ jQuery(function($) {
 			$('#gallery').delay(500).fadeIn(800, 'easeInOutCubic');
 		});
 
-		$('#open-terminal').click(function(e){
-			e.preventDefault();
-			$('#head').toggleClass('terminal');
-			$('#content').toggleClass('terminal');
-			if($('#head').hasClass('terminal')) {
-				$(this).html('close terminal');
-			} else {
-				$(this).html('open terminal');
-				$('#terminal').find('textarea').val("");
-			}
-		});
-
 		$('#terminal').find('textarea').keypress(function(e) {
 		    if(e.which == 13) {
 					var lines = $('#terminal').find('textarea').val().split('\n');
@@ -90,15 +141,15 @@ jQuery(function($) {
 					}
 					else if(input == "about")
 					{
-						showText("#output", "DATAG.HOST is a visual and musical project by Tommy Poirier-Morissette, bringing code, generative visuals and electronic music into public space and back on the web.", 0, 10);
+						showText("#terminal-textarea", "DATAG.HOST is a visual and musical project by Tommy Poirier-Morissette, bringing code, generative visuals and electronic music into public space and back on the web.", 0, 10);
 					}
 					else if(input == "help")
 					{
-						showText("#output", "You are on your own here, no documentation is yet accessible, feel free to explore this uncharted territory.", 0, 10);
+						showText("#terminal-textarea", "You are on your own here, no documentation is yet accessible, feel free to explore this uncharted territory.", 0, 10);
 					}
 					else if(input == "more help")
 					{
-						showText("#output", "Okay, I lied, here are commands to get you started: 'about' 'help' 'darker' 'lighter' 'neutral' 'void' 'see more' 'see less' 'visuals' 'sounds' 'echoes' 'all content'", 0, 10);
+						showText("#terminal-textarea", "Okay, I lied, here are commands to get you started: 'about' 'help' 'darker' 'lighter' 'neutral' 'void' 'see more' 'see less' 'visuals' 'sounds' 'echoes' 'all content'", 0, 10);
 					}
 					else if(input == "void")
 					{
@@ -132,26 +183,14 @@ jQuery(function($) {
 					}
 					else if(input == "batman")
 					{
-						showText("#output", "NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN", 0, 10);
+						showText("#terminal-textarea", "NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN NaN", 0, 10);
 					}
 					else
 					{
-						showText("#output", "That's not a registered expression, try 'help' to get some insight.", 0, 10);
+						showText("#terminal-textarea", "That's not a registered expression, try 'help' to get some insight.", 0, 10);
 					}
 		    }
 		});
-
-		// generate instagram feed
-
-		var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'datag_host',
-        clientId: '7ebf8473c6a540c280cf72dced575ea1',
-				resolution:'standard_resolution',
-				limit: '3',
-				template: '<div class="instagram"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></div>'
-    });
-    feed.run();
 
   });
 });

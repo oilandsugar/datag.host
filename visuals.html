@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>datag.host</title>
+    <title>datag.host _ visuals</title>
     <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
@@ -13,35 +13,58 @@
     <script src="js/instafeed.min.js"></script>
     <script src="js/script.js"></script>
   </head>
-  <body>
-    <div class="wrap">
+  <body class="visuals">
 
-      <div id="visuals" class="col content-type">
+    <header id="head">
+      <div class="wrap">
         <div class="padding">
-          <h1>
-            VISUALS<br>
-          </h1>
-          <div id="05" class="img">
-            <img src="img/absenceofnoise-10.png">
+          <div id="logo">
+            <a href="index.html">
+              <img src="img/dataghostlogo.svg">
+            </a>
           </div>
-          <div id="04" class="img">
-            <img src="img/merger.png">
-          </div>
-          <div id="03" class="img">
-            <img src="img/flyer.jpg">
-          </div>
-          <div id="02" class="img">
-            <img src="img/dataset.svg">
-          </div>
-          <div id="01" class="img">
-            <img src="img/wip.png">
-            <div class="caption">
-              building the visuals of datag.host
-            </div>
+          <div class="nav">
+            <ul>
+              <li><a href="visuals.html">visuals</a></li>
+              <li><a href="sounds.html">sounds</a></li>
+              <li><a href="echoes.html">echoes</a></li>
+            </ul>
           </div>
         </div>
       </div>
-
+    </header>
+    
+    <div class="wrap">
+      <section id="content">
+        <div id="visuals" class="content-type">
+          <div class="padding">
+            <h1>
+              VISUALS
+            </h1>
+            <div id="visuals-wrapper" class="flex-wrap">
+              <div class="flex-row">
+                <div id="visual-1" class="img flex-item">
+                  <img src="img/absenceofnoise-10.png">
+                </div>
+                <div id="visual-2" class="img flex-item">
+                  <img src="img/merger.png">
+                </div>
+                <div id="visial-3" class="img flex-item">
+                  <img src="img/flyer.jpg">
+                </div>
+                <div id="visual-4" class="img flex-item">
+                  <img src="img/dataset.svg">
+                </div>
+              </div>
+              <div class="flex-row">
+                <div id="visual-5" class="img flex-item">
+                  <img src="img/wip.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>

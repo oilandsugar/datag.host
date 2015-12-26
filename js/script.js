@@ -27,17 +27,19 @@ jQuery(function($) {
 
 	$(document).ready(function() {
 
-		// waves
-		var wavesurfer = Object.create(WaveSurfer);
-    // Load audio from URL
-		wavesurfer.init({
-        container: document.querySelector('#waveform'),
-        waveColor: '#A8DBA8',
-        progressColor: '#3B8686',
-        backend: 'MediaElement'
-    });
-    // Load audio from URL
-    wavesurfer.load('../audio/orb-crs-3.mp3');
+		if($('body').hasClass('sounds')) {
+			// waves
+			var wavesurfer = Object.create(WaveSurfer);
+	    // Load audio from URL
+			wavesurfer.init({
+	        container: document.querySelector('#waveform'),
+	        waveColor: '#A8DBA8',
+	        progressColor: '#3B8686',
+	        backend: 'MediaElement'
+	    });
+	    // Load audio from URL
+	    wavesurfer.load('../audio/orb-crs-3.mp3');
+		}
 
 		// terminal
 

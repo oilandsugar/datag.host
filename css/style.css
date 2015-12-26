@@ -123,6 +123,14 @@ body.index #content {
   color:#787A7A;
 }
 
+#terminal-button {
+  float:right;
+}
+
+#terminal-button i {
+  margin-right:10px;
+}
+
 #terminal {
   height: 400px;
   background-size: cover;

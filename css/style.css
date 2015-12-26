@@ -439,7 +439,8 @@ img {
   margin-right: -20px;
 }
 
-#echoes h1 {
+#echoes h1,
+#sounds h1 {
   color:#606060;
 }
 
@@ -530,30 +531,74 @@ img {
 
 .sound {
   width:100%;
+  padding:20px;
   margin:20px 0;
-  padding: 20px;
   box-sizing: border-box;
   background: #000;
   position:relative;
-  opacity: 0.7;
   cursor:pointer;
   -o-transition:0.8s;
   -moz-transition:0.8s;
   -webkit-transition:0.8s;
   transition:0.8s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: horizontal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.sound .cover {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.sound .player {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  -moz-box-flex: 3;
+  -moz-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.sound .player audio {
+  width:100%;
 }
 
 .sound .info {
-  font-size:8px;
+  font-size:10px;
   font-family: 'Share Tech Mono', monospace;
   word-break: break-all;
   color:#606060;
 }
 
 .sound .info-wrap {
-  position: absolute;
-  left: 10px;
-  top: 10px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left:-20px;
+}
+
+.sound h2 {
+  font-size:18px;
+  letter-spacing:1px;
 }
 
 .sound:hover h2 {

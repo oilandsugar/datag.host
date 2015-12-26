@@ -38,7 +38,7 @@ jQuery(function($) {
 	        backend: 'MediaElement'
 	    });
 	    // Load audio from URL
-	    wavesurfer.load('../audio/orb-crs-3.mp3');
+	    wavesurfer.load('../datag.host/audio/orb-crs-3.mp3');
 		}
 
 		// terminal

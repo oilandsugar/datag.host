@@ -119,8 +119,19 @@ body.index #content {
   border-bottom:1px solid;
 }
 
-#head .nav ul li a:hover {
+#head .nav ul li a:hover,
+#dots a:hover {
   color:#787A7A;
+}
+
+#dots {
+  padding-left: 40px;
+  font-size: 10px;
+}
+
+#dots a {
+  color:#606060;
+  margin-right:10px;
 }
 
 #terminal-button {

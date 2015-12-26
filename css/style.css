@@ -579,6 +579,10 @@ img {
   width:100%;
 }
 
+.player #waveform {
+  margin-bottom:20px;
+}
+
 .sound .info {
   font-size:10px;
   font-family: 'Share Tech Mono', monospace;

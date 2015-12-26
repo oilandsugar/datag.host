@@ -33,8 +33,8 @@ jQuery(function($) {
 	    // Load audio from URL
 			wavesurfer.init({
 	        container: document.querySelector('#waveform'),
-	        waveColor: '#A8DBA8',
-	        progressColor: '#3B8686',
+	        waveColor: '#606060',
+	        progressColor: '#787A7A',
 	        backend: 'MediaElement'
 	    });
 	    // Load audio from URL

@@ -39,6 +39,8 @@ jQuery(function($) {
 			$('#toggle-terminal').toggleClass('active');
 		});
 
+		$('#terminal').draggable();
+
 		// rotator
 
 		var $rotator = $("#back-visuals");

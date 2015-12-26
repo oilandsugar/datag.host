@@ -17,23 +17,34 @@
 
     <header id="head">
       <div class="wrap">
-        <div class="padding">
           <div id="logo">
-            <a href="index.html">
-              <img src="img/dataghostlogo.svg">
-            </a>
+            <div class="padding">
+              <a href="index.html">
+                <img src="img/dataghostlogo.svg">
+              </a>
+            </div>
           </div>
           <div class="nav">
-            <ul>
-              <li><a href="visuals.html">visuals</a></li>
-              <li><a href="sounds.html">sounds</a></li>
-              <li><a href="echoes.html">echoes</a></li>
-            </ul>
+            <div class="padding">
+              <ul>
+                <li><a href="visuals.html">visuals</a></li>
+                <li><a href="sounds.html">sounds</a></li>
+                <li><a class="active" href="echoes.html">echoes</a></li>
+                <li><a id="toggle-terminal" href="">terminal</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="single-echo text">
+            <div class="padding">
+            A ghost made out of data,<br>
+            persistent data,<br>
+            independent from it's source.
+            </div>
           </div>
         </div>
       </div>
     </header>
-    
+
     <div class="wrap">
       <section id="content">
         <div id="echoes" class="content-type">
@@ -102,7 +113,16 @@
           </div>
         </div>
       </section>
-    </div>
 
+      <div id="terminal">
+        <div class="header"><span id="close-terminal" class="circle-btn"></span><span class="circle-btn"></span><span class="circle-btn"></span><span class="terminal-title">h()st</span></div>
+        <div class="window">
+          <form>
+            <textarea id="terminal-textarea" placeholder="enter your commands here"></textarea>
+          </form>
+        </div>
+      </div>
+
+    </div>
   </body>
 </html>

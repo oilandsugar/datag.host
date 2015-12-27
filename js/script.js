@@ -89,6 +89,20 @@ jQuery(function($) {
 					wavesurfer.play();
 				}
 			});
+
+			// mute
+			$('#mute').click(function(e){
+				e.preventDefault();
+				$(this).find('i').toggleClass('fa-volume-up');
+				$(this).find('i').toggleClass('fa-volume-off');
+				wavesurfer.toggleMute();
+			});
+
+			// set volume
+			$('#volume-range').on('change', function(){
+				var volume = $(this).val();
+				wavesurfer.setVolume(volume);
+			});
 		}
 
 		// terminal

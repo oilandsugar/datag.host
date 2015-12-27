@@ -25,16 +25,27 @@ jQuery(function($) {
 		}
 	}
 
-	function msToTime(s) {
-	  var ms = s % 1000;
-	  s = (s - ms) / 1000;
-	  var secs = s % 60;
-	  s = (s - secs) / 60;
-	  var mins = s % 60;
-	  var hrs = (s - mins) / 60;
+	function secondsToTime(secs){
+    var hours = Math.floor(secs / (60 * 60));
+    var divisor_for_minutes = secs % (60 * 60);
+    var minutes = Math.floor(divisor_for_minutes / 60);
+    var divisor_for_seconds = divisor_for_minutes % 60;
+    var seconds = Math.ceil(divisor_for_seconds);
+		if(minutes < 10) {
+			if(seconds < 10) {
+				return '0' + minutes + ":" + '0' + seconds;
+			} else {
+				return '0' + minutes + ":" + seconds;
+			}
+		} else {
+			if(seconds < 10) {
+				return minutes + ":" + '0' + seconds;
+			} else {
+				return minutes + ":" + seconds;
+			}
+		}
 
-	  return hrs + ':' + mins + ':' + secs + '.' + ms;
-	}
+}
 
 	$(document).ready(function() {
 
@@ -52,7 +63,20 @@ jQuery(function($) {
 					height: 160
 	    });
 	    // Load audio from URL
-	    wavesurfer.load('../datag.host/audio/orb-crs-3.mp3');
+	    wavesurfer.load('http://dev.datag.host/datag.host/audio/orb-crs-3.mp3');
+
+			// set duration
+			wavesurfer.on('ready', function(){
+				var raw_duration = wavesurfer.getDuration();
+				var duration = secondsToTime(raw_duration);
+				$('.time').find('.left').html(duration);
+			});
+
+			// update current time
+			wavesurfer.on('audioprocess', function(){
+				var elapsed = secondsToTime(wavesurfer.getCurrentTime());
+				$('.time').find('.elapsed').html(elapsed);
+			});
 
 			// play pause
 			$('#play-sound').click(function(e){
@@ -64,19 +88,6 @@ jQuery(function($) {
 				} else {
 					wavesurfer.play();
 				}
-			});
-
-			// set duration
-			var raw_duration = wavesurfer.getDuration();
-			console.log(raw_duration);
-			var duration = msToTime(raw_duration);
-			console.log(duration);
-			$('.time').find('.left').html(duration);
-
-			// update current time
-			wavesurfer.on(audioprocess, function(){
-				var elapsed = msToTime(wavesurfer.getCurrentTime());
-				$('.time').find('.elapsed').html(elapsed);
 			});
 		}
 

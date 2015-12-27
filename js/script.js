@@ -35,7 +35,10 @@ jQuery(function($) {
 	        container: document.querySelector('#waveform'),
 	        waveColor: '#606060',
 	        progressColor: '#787A7A',
-	        backend: 'MediaElement'
+	        backend: 'MediaElement',
+					barWidth: 3,
+					cursorColor: '#ffffff',
+					height: 160
 	    });
 	    // Load audio from URL
 	    wavesurfer.load('../datag.host/audio/orb-crs-3.mp3');

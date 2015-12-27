@@ -602,6 +602,22 @@ img {
   margin-bottom:20px;
 }
 
+.player-controls {
+  border-top: 1px solid #606060;
+}
+
+.player-controls .time span {
+  display:inline-block;
+  padding:15px 20px;
+  border-left: 1px solid;
+}
+
+.player .player-controls a {
+  color:#fff;
+  padding:15px 20px;
+  float:left;
+}
+
 .sound .info {
   font-size:10px;
   font-family: 'Share Tech Mono', monospace;

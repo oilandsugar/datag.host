@@ -67,7 +67,10 @@ jQuery(function($) {
 			});
 
 			// set duration
-			var duration = msToTime(wavesurfer.getDuration());
+			var raw_duration = wavesurfer.getDuration();
+			console.log(raw_duration);
+			var duration = msToTime(raw_duration);
+			console.log(duration);
 			$('.time').find('.left').html(duration);
 
 			// update current time

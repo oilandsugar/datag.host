@@ -42,6 +42,17 @@ jQuery(function($) {
 	    });
 	    // Load audio from URL
 	    wavesurfer.load('../datag.host/audio/orb-crs-3.mp3');
+
+			$('#play-sound').click(function(e){
+				e.preventDefault();
+				$(this).find('i').toggleClass('fa-play');
+				$(this).find('i').toggleClass('fa-pause');
+				if(wavesurfer.isPlaying()){
+					wavesurfer.pause();
+				} else {
+					wavesurfer.play();
+				}
+			})
 		}
 
 		// terminal

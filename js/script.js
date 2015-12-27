@@ -25,6 +25,17 @@ jQuery(function($) {
 		}
 	}
 
+	function msToTime(s) {
+	  var ms = s % 1000;
+	  s = (s - ms) / 1000;
+	  var secs = s % 60;
+	  s = (s - secs) / 60;
+	  var mins = s % 60;
+	  var hrs = (s - mins) / 60;
+
+	  return hrs + ':' + mins + ':' + secs + '.' + ms;
+	}
+
 	$(document).ready(function() {
 
 		if($('body').hasClass('sounds')) {
@@ -43,6 +54,7 @@ jQuery(function($) {
 	    // Load audio from URL
 	    wavesurfer.load('../datag.host/audio/orb-crs-3.mp3');
 
+			// play pause
 			$('#play-sound').click(function(e){
 				e.preventDefault();
 				$(this).find('i').toggleClass('fa-play');
@@ -52,7 +64,17 @@ jQuery(function($) {
 				} else {
 					wavesurfer.play();
 				}
-			})
+			});
+
+			// set duration
+			var duration = msToTime(wavesurfer.getDuration());
+			$('.time').find('.left').html(duration);
+
+			// update current time
+			wavesurfer.on(audioprocess, function(){
+				var elapsed = msToTime(wavesurfer.getCurrentTime());
+				$('.time').find('.elapsed').html(elapsed);
+			});
 		}
 
 		// terminal

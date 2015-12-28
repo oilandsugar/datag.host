@@ -117,6 +117,19 @@ jQuery(function($) {
 			e.preventDefault();
 			$('#terminal').toggleClass('show');
 			$('#toggle-terminal').toggleClass('active');
+			$('#terminal').removeClass('full-screen');
+		});
+
+		$('#expand-terminal').click(function(e) {
+			e.preventDefault();
+			$('#terminal').toggleClass('full-screen');
+			if($('#terminal').hasClass('full-screen')) {
+				$('#terminal').draggable( 'disable' );
+			} else {
+				$('#terminal').draggable( 'enable' );
+			}
+			$('#expand-terminal').find('i').toggleClass('fa-expand');
+			$('#expand-terminal').find('i').toggleClass('fa-compress');
 		});
 
 		$('#terminal').draggable();

@@ -24,6 +24,17 @@ body.visuals #head .nav ul li a {
   color:#000;
 }
 
+body.visuals #head {
+  z-index:100;
+  background:rgba(213,213,213,0.7);
+}
+
+body.sounds #head,
+body.echoes #head {
+  z-index:100;
+  background:rgba(28,31,31,0.7);
+}
+
 body.index #content {
   background:#1C1F1F;
   margin-top:0;
@@ -175,6 +186,8 @@ body.index #content {
   background:#9E9F9F;
   overflow:hidden;
   position:relative;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 #terminal .terminal-title {
@@ -191,17 +204,38 @@ body.index #content {
 }
 
 #terminal .header .circle-btn {
-  width:10px;
-  height:10px;
+  width: 14px;
+  height: 14px;
+  font-size:8px;
+  text-align:center;
+  color:#606060;
   display:block;
   float:left;
-  background:#1C1F1F;
-  margin-right:4px;
+  background:#606060;
+  margin-right:6px;
   border-radius:50%;
   overflow:hidden;
+  line-height:15px;
 }
 
-#close-terminal {
+#terminal.full-screen {
+  height:100%;
+  width:100%;
+  margin:0;
+  position:fixed;
+  top:0!important;
+  left:0!important;
+  bottom:0;
+  right:0;
+  border-radius:0;
+}
+
+#terminal .header:hover .circle-btn {
+  color:#000;
+}
+
+#close-terminal,
+#expand-terminal {
   cursor:pointer
 }
 
@@ -277,6 +311,10 @@ body.index #content {
 
 a {
   cursor:pointer;
+  -o-transition:0.8s;
+  -moz-transition:0.8s;
+  -webkit-transition:0.8s;
+  transition:0.8s;
 }
 
 a.link {
@@ -858,9 +896,13 @@ input[type=range]:focus::-ms-fill-upper {
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  color:#fff;
+  color:#606060;
   padding:15px 0;
   text-align:center;
+}
+
+.player .player-controls a:hover {
+  color:#fff;
 }
 
 .sound .info {

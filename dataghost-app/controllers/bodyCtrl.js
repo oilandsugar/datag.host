@@ -1,6 +1,6 @@
-angular.module('dataghost-app').controller("bodyCtrl", ['$rootScope', bodyCtrl ] });
+angular.module('dataghost-app').controller("bodyCtrl", ['$rootScope', bodyCtrlFunc ] });
 
-function bodyCtrl($rootScope) {
+function bodyCtrlFunc($rootScope) {
   var vm = this;
   console.log('in controller body');
   vm.bodyClass = 'echoes';

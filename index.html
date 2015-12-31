@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="dataghost-app">
   <head>
     <meta charset="utf-8">
     <title>datag.host</title>
@@ -8,18 +8,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dataghost-app/css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico"/>
+  </head>
+  <body ng-class="bodyClass">
+    <div ui-view>
+
+    </div>
+
     <script src="dataghost-app/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
     <script src="dataghost-app/app.js"></script>
-	  <script src="dataghost-app/assets/js/jquery-2.1.4.min.js"></script>
+    <script src="dataghost-app/controllers/mainCtrl.js"></script>
+    <script src="dataghost-app/controllers/visualsCtrl.js"></script>
+    <script src="dataghost-app/controllers/soundsCtrl.js"></script>
+    <script src="dataghost-app/controllers/echoesCtrl.js"></script>
+    <script src="dataghost-app/assets/js/jquery-2.1.4.min.js"></script>
     <script src="dataghost-app/assets/js/jquery-ui.min.js"></script>
     <script src="dataghost-app/assets/js/packery.pkgd.min.js"></script>
     <script src="dataghost-app/assets/js/instafeed.min.js"></script>
     <script src="dataghost-app/assets/js/script.js"></script>
-  </head>
-  <body ng-app="dataghost-app" ng-class="bodyClass">
-    <div ui-view>
 
-    </div>
   </body>
 </html>

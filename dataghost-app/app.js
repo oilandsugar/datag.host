@@ -33,10 +33,3 @@ angular.module('dataghost-app').config(function($stateProvider, $urlRouterProvid
       controller: 'adminCtrl as adm'
     });
 });
-
-angular.module('dataghost-app').run(function($rootScope) {
-   $rootScope.$on('$routeChangeSuccess', function(ev,data) {
-     if (data.$route && data.$route.controller)
-       $rootScope.controller = data.$route.controller;
-   })
-});

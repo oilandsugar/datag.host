@@ -1,0 +1,47 @@
+<div class="wrap" ng-controller="echoesCtrl as ech">
+  <section id="content">
+    <div id="echoes" class="content-type">
+      <div class="padding">
+        <h1>
+          ECHOES
+        </h1>
+      </div>
+      <div id="echoes-wrapper" class="flex-wrap">
+        <div class="flex-row">
+          <div ng-repeat="ech.echoes as echo" id="echo-{{ echo.ID }}" class="echo flex-item text">
+            <div class="padding">
+              {{ echo.text }}
+            </div>
+          </div>
+        <div class="flex-row">
+          <div id="echo-1" class="echo flex-item text">
+            <div class="padding">
+              A ghost made out of data,<br>
+              persistent data,<br>
+              independent from it's source.
+            </div>
+          </div>
+          <div id="echo-2" class="echo flex-item text">
+            <div class="padding">
+              An empty dataset,<br>
+              visible,<br>
+              but intangible.
+            </div>
+          </div>
+          <div id="echo-3" class="echo flex-item text">
+            <div class="padding">
+              function ghosting(){<br>
+                  return NULL<br>
+              }
+            </div>
+          </div>
+          <div id="echo-4" class="echo flex-item text">
+            <div class="padding">
+              last one
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,7 +1,7 @@
-angular.module('dataghost-app').controller("mainCtrl", function(){
+angular.module('dataghost-app').controller("soundsCtrl", function(){
     var vm = this;
     console.log('in controller sounds');
-    vm.bodyClass = 'index';
+    vm.bodyClass = 'sounds';
     vm.stories = [
       {
         name: 'projet 1',

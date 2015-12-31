@@ -14,60 +14,11 @@
     <script src="js/instafeed.min.js"></script>
     <script src="js/script.js"></script>
   </head>
-  <body class="index">
+  <body ng-app="dataghost-app" ng-class="body_class">
+    <ng-include src="dataghost-app/partials/header.html"></ng-include>
+    <div ui-view>
 
-    <header id="head">
-      <div class="wrap">
-          <div id="logo">
-            <div class="padding">
-              <a href="index.html">
-                <img src="img/dataghostlogo.svg">
-              </a>
-            </div>
-          </div>
-          <div class="nav">
-            <div class="padding">
-              <ul>
-                <li><a href="visuals.html">visuals</a></li>
-                <li><a href="sounds.html">sounds</a></li>
-                <li><a href="echoes.html">echoes</a></li>
-                <li id="terminal-button"><a id="toggle-terminal" href=""><i class="fa fa-terminal"></i>terminal</a></li>
-              </ul>
-            </div>
-            <div id="dots"></div>
-          </div>
-          <div class="single-echo text">
-            <div class="padding">
-            A ghost made out of data,<br>
-            persistent data,<br>
-            independent from it's source.
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section id="content">
-      <div id="back-visuals">
-        <img src="img/back-logo-sound.jpg">
-        <img src="img/back-glitch-1.jpg">
-        <img src="img/back-lines.jpg">
-        <img src="img/back-shift.jpg">
-      </div>
-    </section>
-
-    <div id="terminal">
-      <div class="header">
-        <span id="close-terminal" class="circle-btn"><i class="fa fa-times"></i></span>
-        <span id="expand-terminal" class="circle-btn"><i class="fa fa-expand"></i></span>
-        <span class="terminal-title">h()st</span>
-      </div>
-      <div class="window">
-        <form>
-          <textarea id="terminal-textarea" placeholder="enter your commands here"></textarea>
-        </form>
-      </div>
     </div>
-
+    <ng-include src="dataghost-app/partials/terminal.html"></ng-include>
   </body>
 </html>

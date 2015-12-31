@@ -4,11 +4,20 @@ angular.module('dataghost-app').controller("visualsCtrl", function(){
     vm.bodyClass = 'visuals';
     vm.visuals = [
       {
-        name: 'projet 1',
-        date: '2015 01 02',
-        duration: "25 minutes",
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida libero turpis, nec mattis odio imperdiet at. Maecenas venenatis tincidunt lacinia. Phasellus finibus augue metus, vel lobortis dui rutrum vitae.',
-        type: 'video'
+        ID: 1,
+        url: "../datag.host/dataghost-app/assets/img/absenceofnoise-10.png"
+      },
+      {
+        ID: 2,
+        url: "../datag.host/dataghost-app/assets/img/merger.png"
+      },
+      {
+        ID: 3,
+        url: "../datag.host/dataghost-app/assets/img/flyer.jpg"
+      },
+      {
+        ID: 4,
+        url: "../datag.host/dataghost-app/assets/img/dataset.svg"
       }
     ];
 });

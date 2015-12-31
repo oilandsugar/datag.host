@@ -1,4 +1,4 @@
-<div class="wrap">
+<div class="wrap" ng-controller="visualsCtrl as vis">
   <section id="content">
     <div id="visuals" class="content-type">
       <div class="padding">
@@ -7,17 +7,8 @@
         </h1>
         <div id="visuals-wrapper" class="flex-wrap">
           <div class="flex-row">
-            <div id="visual-1" class="img flex-item">
-              <img src="../datag.host/dataghost-app/assets/img/absenceofnoise-10.png">
-            </div>
-            <div id="visual-2" class="img flex-item">
-              <img src="../datag.host/dataghost-app/assets/img/merger.png">
-            </div>
-            <div id="visial-3" class="img flex-item">
-              <img src="../datag.host/dataghost-app/assets/img/flyer.jpg">
-            </div>
-            <div id="visual-4" class="img flex-item">
-              <img src="../datag.host/dataghost-app/assets/img/dataset.svg">
+            <div id="visual-{{ visual.ID }}" class="img flex-item" ng-repeat="visual in vis.visuals">
+              <img src="{{ visual.url }}">
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 angular.module('dataghost-app').controller("visualsCtrl", function(){
     var vm = this;
+    console.log('in controller visuals');
     vm.bodyClass = 'visuals';
     vm.visuals = [
       {

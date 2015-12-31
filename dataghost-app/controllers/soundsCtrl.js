@@ -1,5 +1,6 @@
 angular.module('dataghost-app').controller("mainCtrl", function(){
     var vm = this;
+    console.log('in controller sounds');
     vm.bodyClass = 'index';
     vm.stories = [
       {

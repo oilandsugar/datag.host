@@ -1,5 +1,6 @@
 angular.module('dataghost-app').controller("mainCtrl", function(){
     var vm = this;
+    console.log('in controller main');
     vm.bodyClass = 'index';
     vm.main_visuals = [
       {

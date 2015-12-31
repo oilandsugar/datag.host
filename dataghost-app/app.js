@@ -10,7 +10,7 @@ angular.module('dataghost-app').config(function($stateProvider, $urlRouterProvid
     .state('home', {
       url: "/",
       templateUrl: "dataghost-app/partials/home.html",
-      controller: 'homeCtrl as home'
+      controller: 'mainCtrl as main'
     })
     .state('visuals', {
       url: "/visuals",

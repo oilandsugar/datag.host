@@ -1,7 +1,6 @@
 angular.module('dataghost-app').controller("indexCtrl", function(){
     var vm = this;
     console.log('in controller index');
-    vm.bodyClass = 'index';
     vm.main_visuals = [
       {
         ID: 1,

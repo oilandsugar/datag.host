@@ -1,7 +1,6 @@
 angular.module('dataghost-app').controller("soundsCtrl", function(){
     var vm = this;
     console.log('in controller sounds');
-    vm.bodyClass = 'sounds';
     vm.stories = [
       {
         name: 'projet 1',

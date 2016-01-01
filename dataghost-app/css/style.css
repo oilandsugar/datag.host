@@ -16,6 +16,10 @@ body {
   font-weight:700;
 }
 
+body.echoes {
+  background:#000;
+}
+
 body.visuals {
   background:#D5D5D5;
 }

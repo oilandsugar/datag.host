@@ -1,7 +1,6 @@
 angular.module('dataghost-app').controller("echoesCtrl", function(){
     var vm = this;
     console.log('in controller echoes');
-    vm.bodyClass = 'echoes';
     vm.echoes = [
       {
         ID: 1,

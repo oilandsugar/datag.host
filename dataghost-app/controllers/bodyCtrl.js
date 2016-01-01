@@ -7,12 +7,12 @@ function bodyCtrlFunc($rootScope){
         $rootScope.bodyClass = toState.name;
     });
 
-    vm.getClass = function($rootScope) {
+    vm.getClass = function() {
       return $rootScope.bodyClass;
     };
 
-    vm.lightOrDark = function($rootScope) {
-      if(rootScope.bodyClass == 'visuals') {
+    vm.lightOrDark = function() {
+      if($rootScope.bodyClass == 'visuals') {
         return 'light';
       } else {
         return 'dark';

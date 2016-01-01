@@ -44,6 +44,10 @@ body.index #content {
   z-index:1000;
 }
 
+body.index #ui-view {
+  height: 100%;
+}
+
 #head {
   overflow: hidden;
   height:85px;

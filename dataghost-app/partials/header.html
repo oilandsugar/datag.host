@@ -3,7 +3,8 @@
       <div id="logo">
         <div class="padding">
           <a href="/datag.host/">
-            <img src="../datag.host/dataghost-app/assets/img/dataghostlogo.svg">
+            <img ng-if="body.lightOrDark() == 'dark'" src="../datag.host/dataghost-app/assets/img/dataghostlogo.svg">
+            <img ng-if="body.lightOrDark() == 'light'" src="../datag.host/dataghost-app/assets/img/dataghostlogodark.svg">
           </a>
         </div>
       </div>

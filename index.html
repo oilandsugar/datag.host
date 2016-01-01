@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="dataghost-app/css/style.css">
     <link rel="shortcut icon" href="dataghost-app/assets/img/favicon.ico"/>
   </head>
-  <body ng-controller="bodyCtrl as body" class="{{ body.getClass() }}">
+  <body ng-controller="bodyCtrl as body" class="{{ body.getClass().name }}">
     <ng-include src="'dataghost-app/partials/header.html'"></ng-include>
     <div id="ui-view" ui-view>
 

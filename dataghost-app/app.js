@@ -7,7 +7,7 @@ angular.module('dataghost-app').config(function($stateProvider, $urlRouterProvid
   //
   // Now set up the states
   $stateProvider
-    .state('home', {
+    .state('index', {
       url: "/",
       templateUrl: "dataghost-app/partials/home.html"
     })

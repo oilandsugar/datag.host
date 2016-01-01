@@ -6,4 +6,4 @@ function bodyCtrlFunc($rootScope){
     $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $rootScope.bodyClass = toState;
     });
-});
+};

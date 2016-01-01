@@ -1,8 +1,9 @@
-angular.module('dataghost-app').controller("bodyCtrl", ['$rootScope', function(){
+angular.module('dataghost-app').controller("bodyCtrl", ['$rootScope', bodyCtrlFunc]);
+
+function bodyCtrlFunc($rootScope){
     var vm = this;
     console.log('in controller body');
     $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-        vm.bodyClass = toState;
+        $rootScope.bodyClass = toState;
     });
-    vm.bodyClass = 'index';
-}]);
+});

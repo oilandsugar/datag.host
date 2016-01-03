@@ -26,6 +26,8 @@
 
         vm.main_visuals = mainVisuals.main_visuals;
 
+        vm.single_echo = "A ghost made out of data,<br>persistent data,<br>independent from it's source.";
+
     };
 
 })();

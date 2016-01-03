@@ -8,6 +8,8 @@
     function indexCtrlFunc(mainVisuals){
         var vm = this;
         console.log('in controller index');
+
+        vm.main_visuals = mainVisuals.main_visuals;
     };
 
 })();

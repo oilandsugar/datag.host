@@ -19,7 +19,7 @@
         </div>
         <div id="dots">
           <a href="#" ng-repeat="visual in body.main_visuals" class="dot" ng-class="{'active':body.isCurrentSlideIndex($index)}" ng-click="body.setCurrentSlideIndex($index);">
-            <i class="fa fa-circle-o"></i>
+            <i class="fa" ng-class="body.isCurrentSlideIndex($index) ? 'fa-circle' : 'fa-circle-o'"></i>
           </a>
         </div>
       </div>

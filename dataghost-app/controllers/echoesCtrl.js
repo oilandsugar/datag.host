@@ -24,6 +24,8 @@
           });
         };
 
+        vm.showHomeTimeline();
+
         vm.echoes = [
           {
             ID: 1,

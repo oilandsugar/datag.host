@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dataghost-app/css/style.css">
     <link rel="shortcut icon" href="dataghost-app/assets/img/favicon.ico"/>
+    <script src="dataghost-app/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="dataghost-app/ng-twitter-api.min.js"></script>
+    <script src="dataghost-app/wavesurfer-angular.js"></script>
+    <script src="dataghost-app/app.js"></script>
+    <script src="dataghost-app/services.js"></script>
   </head>
   <body ng-controller="bodyCtrl as body" class="{{ body.getClass() }}">
     <ng-include src="'dataghost-app/partials/header.html'"></ng-include>
@@ -15,12 +21,7 @@
 
     </div>
     <ng-include src="'dataghost-app/partials/terminal.html'"></ng-include>
-    <script src="dataghost-app/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-    <script src="dataghost-app/ng-twitter-api.min.js"></script>
-    <script src="dataghost-app/wavesurfer-angular.js"></script>
-    <script src="dataghost-app/app.js"></script>
-    <script src="dataghost-app/services.js"></script>
+
     <script src="dataghost-app/controllers/bodyCtrl.js"></script>
     <script src="dataghost-app/controllers/terminalCtrl.js"></script>
     <script src="dataghost-app/controllers/indexCtrl.js"></script>

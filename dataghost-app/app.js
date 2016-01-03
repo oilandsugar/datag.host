@@ -1,4 +1,4 @@
-angular.module('dataghost-app', ['ui.router', 'ngTwitter']);
+angular.module('dataghost-app', ['ui.router', 'ngTwitter', 'wavesurfer.angular']);
 
 angular.module('dataghost-app').config(function($stateProvider, $urlRouterProvider) {
   //

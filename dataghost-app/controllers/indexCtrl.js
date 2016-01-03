@@ -26,6 +26,6 @@
             url: "../datag.host/dataghost-app/assets/img/back-shift.jpg"
           }
         ];
-    });
+    };
 
 })();

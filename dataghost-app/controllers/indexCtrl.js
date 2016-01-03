@@ -26,6 +26,16 @@
             url: "../datag.host/dataghost-app/assets/img/back-shift.jpg"
           }
         ];
+
+        vm.currentIndex = 0;
+
+        vm.setCurrentSlideIndex = function (index) {
+            vm.currentIndex = index;
+        };
+
+        vm.isCurrentSlideIndex = function (index) {
+            return vm.currentIndex === index;
+        };
     };
 
 })();

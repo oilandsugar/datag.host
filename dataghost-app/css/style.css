@@ -156,6 +156,14 @@ body.index #ui-view {
   border-bottom:1px solid;
 }
 
+#dots {
+  display:none;
+}
+
+body.index #dots {
+  display:block;
+}
+
 #head .nav ul li a:hover,
 #dots a:hover {
   color:#787A7A;

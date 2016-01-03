@@ -10,6 +10,8 @@
         console.log('in controller index');
 
         vm.main_visuals = mainVisuals.main_visuals;
+        vm.isCurrentSlideIndex() = mainVisuals.isCurrentSlideIndex();
+        vm.setCurrentSlideIndex() = mainVisuals.setCurrentSlideIndex();
     };
 
 })();

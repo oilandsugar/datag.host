@@ -18,7 +18,7 @@
           </ul>
         </div>
         <div id="dots">
-          <a href="#" ng-repeat="visual in mainVisuals.main_visuals" class="dot" ng-class="{'active':mainVisuals.isCurrentSlideIndex($index)}" ng-click="body.setCurrentSlideIndex($index);">
+          <a href="#" ng-repeat="visual in body.main_visuals" class="dot" ng-class="{'active':body.isCurrentSlideIndex($index)}" ng-click="body.setCurrentSlideIndex($index);">
             <i class="fa fa-circle-o"></i>
           </a>
         </div>

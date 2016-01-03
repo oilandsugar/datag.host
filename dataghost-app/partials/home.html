@@ -1,9 +1,7 @@
 <section id="content" ng-controller="indexCtrl as ind">
-  <ul class="dots">
-    <li class="dot" ng-repeat="visual in ind.main_visuals">
-      <a href="#" ng-class="{'active':ind.isCurrentSlideIndex($index)}" ng-click="ind.setCurrentSlideIndex($index);"><i class="fa fa-circle-o"></i></a>
-    </li>
-  </ul>
+  <div id="dots">
+    <a href="#" ng-repeat="visual in ind.main_visuals" class="dot" ng-class="{'active':ind.isCurrentSlideIndex($index)}" ng-click="ind.setCurrentSlideIndex($index);"><i class="fa fa-circle-o"></i></a>
+  <div>
   <div id="back-visuals">
     <img ng-repeat="visual in ind.main_visuals" ng-hide="!ind.isCurrentSlideIndex($index)" src="{{ visual.url }}">
   </div>

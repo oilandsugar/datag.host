@@ -25,8 +25,12 @@
         };
 
         vm.main_visuals = mainVisuals.main_visuals;
-        vm.isCurrentSlideIndex() = mainVisuals.isCurrentSlideIndex();
-        vm.setCurrentSlideIndex() = mainVisuals.setCurrentSlideIndex();
+        vm.isCurrentSlideIndex = function(index){
+          return mainVisuals.isCurrentSlideIndex(index);
+        };
+        vm.setCurrentSlideIndex = function(index){
+          return mainVisuals.setCurrentSlideIndex(index);
+        };
 
         vm.single_echo = "A ghost made out of data,<br>persistent data,<br>independent from it's source.";
 

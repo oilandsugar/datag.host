@@ -3,9 +3,9 @@
 
     angular
         .module('dataghost-app')
-        .controller("bodyCtrl", ['$rootScope', bodyCtrlFunc]);
+        .controller("bodyCtrl", ['$rootScope', 'mainVisuals', bodyCtrlFunc]);
 
-    function bodyCtrlFunc($rootScope){
+    function bodyCtrlFunc($rootScope, mainVisuals){
         var vm = this;
         console.log('in controller body');
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
@@ -23,6 +23,8 @@
             return 'dark';
           }
         };
+
+        vm.main_visuals = mainVisuals.main_visuals;
 
     };
 

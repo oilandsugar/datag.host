@@ -3,39 +3,11 @@
 
     angular
         .module('dataghost-app')
-        .controller("indexCtrl", indexCtrlFunc);
+        .controller("indexCtrl", ['mainVisuals', indexCtrlFunc]);
 
-    function indexCtrlFunc(){
+    function indexCtrlFunc(mainVisuals){
         var vm = this;
         console.log('in controller index');
-        vm.main_visuals = [
-          {
-            ID: 1,
-            url: "../datag.host/dataghost-app/assets/img/back-logo-sound.jpg"
-          },
-          {
-            ID: 2,
-            url: "../datag.host/dataghost-app/assets/img/back-glitch-1.jpg"
-          },
-          {
-            ID: 3,
-            url: "../datag.host/dataghost-app/assets/img/back-lines.jpg"
-          },
-          {
-            ID: 4,
-            url: "../datag.host/dataghost-app/assets/img/back-shift.jpg"
-          }
-        ];
-
-        vm.currentIndex = 0;
-
-        vm.setCurrentSlideIndex = function (index) {
-            vm.currentIndex = index;
-        };
-
-        vm.isCurrentSlideIndex = function (index) {
-            return vm.currentIndex === index;
-        };
     };
 
 })();

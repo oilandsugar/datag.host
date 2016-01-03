@@ -17,7 +17,9 @@
             <li id="terminal-button"><a id="toggle-terminal" href=""><i class="fa fa-terminal"></i>terminal</a></li>
           </ul>
         </div>
-        <div id="dots"></div>
+        <div id="dots">
+          <a href="#" ng-repeat="visual in body.main_visuals" class="dot" ng-class="{'active':body.isCurrentSlideIndex($index)}" ng-click="body.setCurrentSlideIndex($index);"><i class="fa fa-circle-o"></i></a>
+        <div>
       </div>
       <div class="single-echo text">
         <div class="padding">

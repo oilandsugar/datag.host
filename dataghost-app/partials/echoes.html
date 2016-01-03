@@ -8,9 +8,10 @@
       </div>
       <div id="echoes-wrapper" class="flex-wrap">
         <div class="flex-row">
-          <div ng-repeat="echo in ech.echoes" id="echo-{{ echo.ID }}" class="echo flex-item text">
+          <div ng-repeat="entry in home_timeline" class="echo flex-item text">
             <div class="padding">
-              {{ echo.text }}
+              <p ng-bind-html="entry.text"></p>
+              <img ng-if="entry.extended_entities" ng-src="{{ entry.extended_entities.media[0].media_url }}" style="width: 100%;"/>
             </div>
           </div>
       </div>

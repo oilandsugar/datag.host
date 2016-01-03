@@ -9,29 +9,11 @@
         var vm = this;
         console.log('in controller echoes');
 
-        var twitterKey = 'STORAGE.TWITTER.KEY';
         var clientId = '6aX0qCOrG3CXgragf7taQMivr';
         var clientSecret = 'fuJ0h7SvNkmLhfDbHRKpxT3CjdhYK4q6FXHr3FoiPCcSRzRHkI';
-        var myToken = '';
+        var myToken = '571281656-CGghD8oKpMEYFWgXFvOqwbO5GP4EaYijzBFckU2j';
 
-        vm.tweet = {};
-
-        $ionicPlatform.ready(function() {
-          myToken = JSON.parse(window.localStorage.getItem(twitterKey));
-          if (myToken === '' || myToken === null) {
-            $cordovaOauth.twitter(clientId, clientSecret).then(function (succ) {
-              myToken = succ;
-              window.localStorage.setItem(twitterKey, JSON.stringify(succ));
-              $twitterApi.configure(clientId, clientSecret, succ);
-              vm.showHomeTimeline();
-            }, function(error) {
-              console.log(error);
-            });
-          } else {
-            $twitterApi.configure(clientId, clientSecret, myToken);
-            vm.showHomeTimeline();
-          }
-        });
+        $twitterApi.configure(clientId, clientSecret, myToken);
 
         vm.showHomeTimeline = function() {
           $twitterApi.getHomeTimeline().then(function(data) {

@@ -16,19 +16,12 @@
         $twitterApi.configure(clientId, clientSecret, myToken);
 
         vm.showHomeTimeline = function() {
-          $twitterApi.getHomeTimeline({count: 5}).then(function(data) {
+          $twitterApi.getHomeTimeline({count: 4}).then(function(data) {
             console.log(data);
             vm.home_timeline = data;
+          }, function(error) {
+            console.log('err: ' + error);
           });
-        };
-
-        vm.doRefresh = function() {
-          vm.showHomeTimeline();
-          vm.$broadcast('scroll.refreshComplete');
-        };
-
-        vm.correctTimestring = function(string) {
-          return new Date(Date.parse(string));
         };
 
         vm.echoes = [

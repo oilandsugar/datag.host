@@ -3,15 +3,16 @@
 
     angular
         .module('dataghost-app')
-        .controller("echoesCtrl", [ "$twitterApi", echoesCtrlFunc ]);
+        .controller("echoesCtrl", echoesCtrlFunc);
 
     function echoesCtrlFunc($twitterApi){
         var vm = this;
         console.log('in controller echoes');
 
-        var clientId = '6aX0qCOrG3CXgragf7taQMivr';
-        var clientSecret = 'fuJ0h7SvNkmLhfDbHRKpxT3CjdhYK4q6FXHr3FoiPCcSRzRHkI';
-        var myToken = '571281656-CGghD8oKpMEYFWgXFvOqwbO5GP4EaYijzBFckU2j';
+        var clientId = '2JdDvmIM7SZuxy6tlzGrWDTuy'; // consumer key
+        var clientSecret = 'x7k44xfTp7NySZLyJyOg9j0cjMHhe8TrefztzxhO2Ty9L1lFFA'; // consumer secret
+        var myToken = '4321978402-gf4e0jZwUVM1MPQffVCvOUZVhTH512IAyVrutcK'; // access token
+        var tokenSecret = 'YE3vhkV5BkrDwBLgQ2zCXpGdS530ImE9TtBZObuHMPTNO'; // token secret
 
         $twitterApi.configure(clientId, clientSecret, myToken);
 

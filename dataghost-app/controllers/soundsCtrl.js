@@ -3,9 +3,9 @@
 
     angular
         .module('dataghost-app')
-        .controller("soundsCtrl", soundsCtrlFunc);
+        .controller("soundsCtrl", [ 'wavesurfer-angular', soundsCtrlFunc]);
 
-    function soundsCtrlFunc(){
+    function soundsCtrlFunc(wavesurfer-angular){
         var vm = this;
         console.log('in controller sounds');
 
